@@ -11,10 +11,10 @@
 
     <!-- Get rid of the browser's form autofill so the form is always blank when the user loads the page -->
     <body onload="resetRegistrationForm(true)">
-        <?php include('../inc/header.php'); ?>
+        <?php include('../inc/nav.php'); ?>
 
         <article>
-            <section id="divider"></section>
+            <?php include('../inc/header.php'); ?>
 
             <section class="contentBox">
                 <div id="register">
@@ -352,7 +352,7 @@
             </section>
         </article>
 
-        <!--<footer>Copyright &copy; 2018 Travel Experts Inc. All rights reserved.</footer>-->
+        <?php include('../inc/footer.php'); ?>
 
         <!-- Load jQuery -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
