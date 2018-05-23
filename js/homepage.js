@@ -89,7 +89,7 @@ function moveImageUp()
 
 function moveImageDown()
 {
-    alert('Margin Top: ' + marginTop + '\nPage Height: ' + Math.floor(pageHeight));
+    //alert('Margin Top: ' + marginTop + '\nPage Height: ' + Math.floor(pageHeight));
     imageMarginTop = marginTop;
     image.css('marginTop', imageMarginTop + 'px');
     marginTop++;
