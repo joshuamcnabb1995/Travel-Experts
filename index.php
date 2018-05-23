@@ -18,15 +18,10 @@
     </head>
 
     <body>
-        <?php include('inc/header.php'); ?>
+        <?php include('inc/nav.php'); ?>
 
         <article>
-            <section id="mainSearch">
-                <form id="mainSearchForm" action="" method="POST">
-                    <input type="search" placeholder="Search for destinations, hotels, rentals, etc..." />
-                    <span id="searchIcon" class="fa fa-search"></span>
-                </form>
-            </section>
+            <?php include('inc/header.php'); ?>
 
             <section>
                 <h1 style="text-align:center;font-size:80px;"><?php echo displayWelcomeMessage(); ?></h1>
