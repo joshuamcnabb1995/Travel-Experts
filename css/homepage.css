@@ -1,0 +1,65 @@
+#extraChallengeContainer { position: absolute; z-index: 9001; }
+
+#extraChallenge {
+    width: 100px;
+    height: 100px;
+    positon: absolute;
+}
+
+#images { margin-top: 15px; }
+#images th, td { border: 1px solid grey; }
+#images img { width: 200px; height: 200px; }
+
+.imageDescription {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+}
+
+.image {
+    z-index: -1;
+    display: none;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+}
+
+/* Start of Search Box Code */
+#mainSearch {
+    background: url('../img/cover.jpg');
+    background-size: cover;
+    border-bottom: 1px solid #aaa;
+    box-shadow: 1px 1px 4px #777;
+}
+
+#mainSearchForm {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+#mainSearchForm input {
+    color: #ddd;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    margin: 55px 0 10px 0;
+    padding: 8px 12px;
+    font-size: 28px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    box-shadow: none;
+}
+#mainSearchForm input:focus { background: rgba(0, 0, 0, 0.85); }
+
+#searchIcon {
+    color: #888;
+    float: right;
+    margin-right: 12px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+    font-size: 28px;
+}
+#searchIcon:hover { cursor: pointer; }
+/* End of Search Box Code */

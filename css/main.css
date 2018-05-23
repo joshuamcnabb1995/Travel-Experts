@@ -1,0 +1,275 @@
+body {
+    background: #eee;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+article { flex: 1 0 auto; }
+
+.test { margin: auto; }
+
+::-moz-selection {
+    color: #fff !important;
+    background: #0091DC !important;
+}
+::selection {
+    color: #fff !important;
+    background: #0091DC !important;
+}
+
+a { color: #007ACC; text-decoration: none; }
+a:hover { color: #2AA3E0; }
+
+.left { float: left !important; }
+.right { float: right !important; }
+
+/* Start of Topbar Navigation Code - Source: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+.topnav {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+    border-bottom: 1px solid #777;
+    position: fixed;
+    box-shadow: 1px 1px 2px #999;
+    z-index: 9999; // make it so the topnav "stacks" over everything
+}
+.topnav #logo, .topnav #logo i { color:#0091DC;  }
+.topnav #logo:hover { border-bottom: 2px solid #0091DC; }
+.topnav a {
+    float: left;
+    display: block;
+    color: #222;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+.topnav a:not(#logo), .topnav a:hover i { transition: color 0.3s; }
+.topnav i { color: #222; font-size: 16px; }
+.active, .topnav a:hover {
+    color: #0091DC !important;
+    border-bottom: 2px solid #0091DC;
+}
+.active i, .topnav a:hover i { color: #0091DC !important; }
+.topnav .icon { display: none; }
+.topnav .icon:hover i { color: #fff; }
+
+@media screen and (max-width: 1120px) {
+    .topnav a { font-size: 0.8em; }
+}
+@media screen and (max-width: 985px) {
+    .topnav a:not(:first-child), .topnav .right {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav a.icon:hover i { color: #0091DC !important; }
+    .topnav .right { float: none !important; border-top: 1px solid #aaa; }
+}
+@media screen and (max-width: 840px) {
+    .topnav.responsive { position: relative; }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a, .topnav.responsive .right {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .topnav.responsive a:hover, .topnav.responsive .active { border-bottom: 0; }
+    .topnav { margin-bottom: -45px; }
+}
+/* End of Topbar Navigation Code */
+
+#divider { height: 45px; } /* Divide the topbar and the content below it */
+
+
+/* Start main site content */
+.contentBox {
+    background: #fff;
+    width: 80%;
+    margin: 20px auto;
+    //padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    overflow: auto;
+    box-shadow: 0px 1px 4px #888;
+}
+
+#content {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.imageGallery {
+    background: #fff;
+    width: 200px;
+    float: left;
+    margin: 0 15px 15px 0;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    text-align: justify;
+}
+.imageGallery:hover { border: 1px solid #777; }
+
+.imageGallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+.imageGallery span { font-size: 0.9em; }
+
+#contactInformation { list-style-type: none; }
+#contactInformation li:first-child { font-weight: bold; }
+
+.button {
+    color: #fff;
+    margin: 12px 0;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-family: Helvetica;
+}
+
+.button.default {
+    color: #000;
+    background: #f7f7f7;
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #e0e0e0 100%);
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#e0e0e0 100%);
+    background: linear-gradient(to bottom, #f7f7f7 0%,#e0e0e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#e0e0e0',GradientType=0 );
+    border: 1px solid #777;
+}
+.button.default:hover { background: #f7f7f7; }
+.button.default:active {
+    background: #e0e0e0;
+    background: -moz-linear-gradient(top, #e0e0e0 0%, #f7f7f7 100%);
+    background: -webkit-linear-gradient(top, #e0e0e0 0%,#f7f7f7 100%);
+    background: linear-gradient(to bottom, #e0e0e0 0%,#f7f7f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#f7f7f7',GradientType=0 );
+}
+
+.button.primary {
+    background: #0098e5;
+    background: -moz-linear-gradient(top, #0098e5 0%, #008ac1 100%);
+    background: -webkit-linear-gradient(top, #0098e5 0%,#008ac1 100%);
+    background: linear-gradient(to bottom, #0098e5 0%,#008ac1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0098e5', endColorstr='#008ac1',GradientType=0 );
+    border: 1px solid #0076A5;
+    text-shadow: 1px 1px 0px #666;
+    box-shadow: inset 0 1px #49CEFF;
+}
+.button.primary:hover { background: #0098e5; }
+.button.primary:active {
+    background: #008ac1;
+    background: -moz-linear-gradient(top, #008ac1 0%, #0098e5 100%);
+    background: -webkit-linear-gradient(top, #008ac1 0%,#0098e5 100%);
+    background: linear-gradient(to bottom, #008ac1 0%,#0098e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008ac1', endColorstr='#0098e5',GradientType=0 );
+}
+
+.button.success {
+    background: #19ff00;
+    background: -moz-linear-gradient(top, #19ff00 0%, #1ddd00 100%);
+    background: -webkit-linear-gradient(top, #19ff00 0%,#1ddd00 100%);
+    background: linear-gradient(to bottom, #19ff00 0%,#1ddd00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19ff00', endColorstr='#1ddd00',GradientType=0 );
+    border: 1px solid #23A500;
+    text-shadow: 1px 1px 0px #666;
+    box-shadow: inset 0 1px #B2FFA8;
+}
+/* End main site content */
+
+/* Start registration and login forms */
+#formLeft, #formRight { width: 45% !important; }
+
+/*#register {}*/
+
+#registerForm { width: 80%; margin: 20px auto 0 auto; }
+#registerForm label { font-weight: bold; font-size: 0.9em; }
+
+input, select {
+    background: #f7f7f7;
+    background: -moz-linear-gradient(top, #f7f7f7 0%, #eeeeee 100%);
+    background: -webkit-linear-gradient(top, #f7f7f7 0%,#eeeeee 100%);
+    background: linear-gradient(to bottom, #f7f7f7 0%,#eeeeee 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#eeeeee',GradientType=0 );
+    width: 100%;
+    border: 1px solid #bbb;
+    margin-top: 5px;
+    border-radius: 3px;
+    padding: 6px 8px;
+    box-shadow: 0 1px 2px #ccc;
+}
+input:focus {
+    background: #f9f9f9;
+    border: 1px solid #0091DC;
+    box-shadow: 0 1px 2px rgba(0, 145, 221, 0.65);
+}
+
+#registerForm .errorMessage {
+    color: red;
+    display: none;
+    margin-top: 8px;
+    //margin-bottom: -5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+#registerForm .mainButton { margin-bottom: 10px; }
+
+#submitForm {
+    clear: both;
+    margin-top: 40px;
+}
+
+#resetRegisterForm { margin-right: -18px; }
+
+@media screen and (max-width: 780px) {
+    #formLeft, #formRight { width: 100% !important; }
+    #formLeft { margin-bottom: 30px; }
+    #registerForm button.primary { margin-top: 0; margin-bottom: 0; }
+    #registerForm button { width: 100%; margin-right: 0; }
+}
+
+.formTitle { color: #333; font-size: 20px; }
+
+.formNotice {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.requiredFieldIndicator { color: red; }
+/* End registration and login forms */
+
+/* Start of "sticky" footer code using FlexBox */
+footer {
+    width: 100%;
+    height: 30px;
+    padding-top: 15px;
+    background: #e5e5e5;
+    color: #222;
+    font-size: 15px;
+    text-align: center;
+    border-top: 1px solid #aaa;
+    flex-shrink: 0;
+    bottom: 0;
+    position: fixed;
+}
+/* End of "sticky" footer code using FlexBox */
