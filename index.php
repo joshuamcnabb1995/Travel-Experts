@@ -1,15 +1,16 @@
 <?php
-    $page = 0;
+    include('functions/getdate.php');
 
-    include('functions/getdata.php');
+    $page = 0;
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <?php include('inc/meta.php'); ?>
 
-        <title>Travel Experts - The Best Travel Site on the Web!</title>
+        <?php echo changeStyle(); ?>
 
+        <title>Travel Experts - The Best Travel Site on the Web!</title>
         <?php include('inc/css.php'); ?>
         <script src="js/navigation.js" type="text/javascript"></script>
         <!-- Load jQuery -->
@@ -28,6 +29,7 @@
             </section>
 
             <section>
+                <h1 style="text-align:center;font-size:80px;"><?php echo displayWelcomeMessage(); ?></h1>
             </section>
 
             <!--<div id="pageContainer">
