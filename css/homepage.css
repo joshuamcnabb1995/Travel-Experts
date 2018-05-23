@@ -1,5 +1,4 @@
 #extraChallengeContainer { position: absolute; z-index: 9001; }
-
 #extraChallenge {
     width: 100px;
     height: 100px;
@@ -16,7 +15,6 @@
     position: relative;
     text-align: center;
 }
-
 .image {
     z-index: -1;
     display: none;
@@ -33,7 +31,6 @@
     border-bottom: 1px solid #aaa;
     box-shadow: 1px 1px 4px #777;
 }
-
 #mainSearchForm {
     width: 80%;
     margin: 0 auto;
