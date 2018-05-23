@@ -39,7 +39,7 @@ function openUrl(id)
 }
 
 // Extra challenge
-var image = $('#extraChallenge'),
+/*var image = $('#extraChallenge'),
     imageMarginLeft = image.css('marginLeft').replace('px', ''),
     imageMarginTop = image.css('marginTop').replace('px', ''),
     marginLeft = 0,
@@ -80,7 +80,7 @@ setInterval(function() {
     }
 }, 1); // run the code every millisecond*/
 
-function moveImageUp()
+/*function moveImageUp()
 {
     imageMarginTop = marginTop;
     image.css('marginTop', imageMarginTop + 'px');
@@ -130,4 +130,4 @@ function moveImageLeft()
     // When the image reaches the left edge of the screen, stop moving it to the left so it can move to the right
     if(marginLeft == 0)
         stopMovingLeft = true;
-}
+}*/

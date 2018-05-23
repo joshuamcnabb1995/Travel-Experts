@@ -1,4 +1,8 @@
-<?php $page = 0; ?>
+<?php
+    $page = 0;
+
+    include('functions/getdata.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,7 +27,10 @@
                 </form>
             </section>
 
-            <div id="pageContainer">
+            <section>
+            </section>
+
+            <!--<div id="pageContainer">
                 <div id="extraChallengeContainer"><img id="extraChallenge" src="img/extrachallenge.jpg" /></div>
 
                 <center>
@@ -37,7 +44,7 @@
                         </tbody>
                     </table>
                 </center><br /><br /><br /><br />
-            </div>
+            </div>-->
 
             <!--<section id="content">
                 <!--<img src="img/logo.png" class="logo" /><h1>Welcome to Travel Experts</h1>-->
