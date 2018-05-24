@@ -5,7 +5,7 @@
     function getTableData($tablename = NULL, $fields = NULL, $queryStatements = NULL, $orderBy = NULL, $orderAsc = TRUE)
     {
          // Declare database object as global so it can be accessed inside the function
-        global $database
+        global $database;
 
         /* Start basic validation */
         if($tablename === NULL)
@@ -27,25 +27,40 @@
         else
             $orderAsc = 'DESC';
 
-        return $database->query("SELECT $fields
-                                       FROM $tablename
-                                       WHERE $queryStatements
-                                       ORDER BY $orderBy
-                                       $orderAsc");
+        // Separate each key by commas for the sql statement
+        $fields = implode(',', array_keys($fields));
+
+        $result = $database->query("SELECT $fields
+                                    FROM $tablename
+                                    WHERE $queryStatements
+                                    ORDER BY $orderBy
+                                    $orderAsc");
+
+        // Loop through the agents table to show all the agents
+        while($row = $result->fetch_assoc()) {
+            echo 'First Name: <b>' . $row['AgtFirstName'] . '</b><br />
+                 Middle Initial: <b>' . $row['AgtMiddleInitial'] . '</b><br />
+                 Last Name: <b>' . $row['AgtLastName'] . '</b><br />
+                 Business Phone: <b>' . $row['AgtBusPhone'] . '</b><br />
+                 Email Address: <b>' . $row['AgtEmail'] . '</b><br />
+                 Position: <b>' . $row['AgtPosition'] . '</b><br />
+                 Agency ID: <b>' . $row['AgencyId'] . '</b><br />';
+        }
     }
 
     function addNewAgent($agentDetails)
     {
         global $database;
 
-        // Separate each key by commas and add single quotes to them for the sql statement
+        // Separate each value by commas and surround them in single quotes for the sql statement
         $values = "'" . implode("','", $agentDetails) . "'";
+
         $database->query("INSERT INTO agents(AgtFirstName, AgtMiddleInitial, AgtLastName, AgtBusPhone, AgtEmail, AgtPosition, AgencyId)
-                                      VALUES($values)") or die('<br />' . $database->error);
+                                      VALUES($values)");
 
         if($database->error)
-            echo '<br />The agent wasn\'t inserted into the database.';
+            echo '<br />No agent was inserted into the database.';
 
         else
-            echo '<br />The agent was successfully inserted into the database.';
+            echo '<br />A new agent was successfully inserted into the database.';
     }
