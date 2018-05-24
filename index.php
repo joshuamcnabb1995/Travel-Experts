@@ -26,63 +26,6 @@
             <section>
                 <h1 style="text-align:center;font-size:80px;"><?php echo displayWelcomeMessage(); ?></h1>
             </section>
-
-            <!--<div id="pageContainer">
-                <div id="extraChallengeContainer"><img id="extraChallenge" src="img/extrachallenge.jpg" /></div>
-
-                <center>
-                    <table id="images">
-                        <thead>
-                            <th>Image Gallery</th>
-                        </thead>
-
-                        <tbody>
-                            <script type="text/javascript" src="js/homepage.js"></script>
-                        </tbody>
-                    </table>
-                </center><br /><br /><br /><br />
-            </div>-->
-
-            <!--<section id="content">
-                <!--<img src="img/logo.png" class="logo" /><h1>Welcome to Travel Experts</h1>-->
-
-                <!--<h3>Travel Destinations</h3>
-
-                <div class="imageGallery">
-                    <img src="img/mountain.jpeg" />
-
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br />
-                    <center><button class="button primary"><i class="fa fa-info-circle"></i>&nbsp; More Info</button>
-                </div>
-
-                <div class="imageGallery">
-                    <img src="img/mountain.jpeg" />
-
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br />
-                    <center><button class="button primary"><i class="fa fa-info-circle"></i>&nbsp; More Info</button>
-                </div>
-
-                <div class="imageGallery">
-                    <img src="img/mountain.jpeg" />
-
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br />
-                    <center><button class="button primary"><i class="fa fa-info-circle"></i>&nbsp; More Info</button>
-                </div>
-
-                <div class="imageGallery">
-                    <img src="img/mountain.jpeg" />
-
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br />
-                    <center><button class="button primary"><i class="fa fa-info-circle"></i>&nbsp; More Info</button>
-                </div>
-
-                <div class="imageGallery">
-                    <img src="img/mountain.jpeg" />
-
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span><br />
-                    <center><button class="button primary"><i class="fa fa-info-circle"></i>&nbsp; More Info</button>
-                </div>
-            </section>-->
         </article>
 
         <?php include('inc/footer.php'); ?>

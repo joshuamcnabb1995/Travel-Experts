@@ -17,7 +17,7 @@
         else if($date > 18 && $date < 22)
             return 'Good Evening';
 
-        // Between 10:00:01pm and 4:59am
+        // Between 10:00pm and 5:00am
         else
             return 'You should be sleeping right now!';
     }
