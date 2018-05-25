@@ -1,7 +1,7 @@
 <?php
     include('functions/getdate.php');
 
-    $page = 0;
+    $page = 0
 ?>
 <!DOCTYPE html>
 <html>
