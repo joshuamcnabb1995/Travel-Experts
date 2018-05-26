@@ -1,4 +1,4 @@
-<?php $page = 7; ?>
+<?php $page = 1; ?>
 <!DOCTYPE html>
 <html>
     <head>

@@ -26,7 +26,7 @@
     {
         echo "<style type=\"text/css\">
                     body {
-                        background: url('../img/$filename.jpg') !important;
+                        background: url('../travel-experts/img/$filename.jpg') !important;
                         background-repeat: no-repeat !important;
                         background-size: cover !important;
                     }
