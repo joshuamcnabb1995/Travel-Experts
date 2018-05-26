@@ -23,8 +23,18 @@
         $database->query("INSERT INTO $table($columns)
                                       VALUES($values)");
 
-        if($database->error)
+        $date = date('l, d F, Y \a\t g:ia');
+
+        if($database->error) {
+            $logMessage = $date . ' - A new result was successfully inserted into the agents table';
             return FALSE;
-        else
+        } else {
+            $logMessage = $date . '- The result wasn\'t inserted into the agents table';
             return TRUE;
+        }
+
+        // Log messages - not working
+        /*$myfile = fopen('logs.txt', 'a') or die('Unable to open file!');
+        fwrite($myfile, "\n". $logMessage);
+        fclose($myfile);*/
     }

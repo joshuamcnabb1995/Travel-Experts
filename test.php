@@ -2,13 +2,15 @@
     include('functions/functions.php');
 
     // Whatever data you want to insert into the table
-    $insertData = array('AgtFirstName' => 'Joshua',
+    /*$insertData = array('AgtFirstName' => 'Joshua',
                         'AgtMiddleInitial' => 'A',
                         'AgtLastName' => 'McNabb',
                         'AgtBusPhone' => 12345678901,
                         'AgtEmail' => 'joshua.mcnabb@edu.sait.ca',
                         'AgtPosition' => 'President',
-                        'AgencyId' => 1);
+                        'AgencyId' => 1);*/
+
+    $insertData = $_POST;
 
     if(addNewTableResult('agents', $insertData))
         echo 'A new result was successfully inserted into the agents table.';

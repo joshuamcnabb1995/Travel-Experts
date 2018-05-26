@@ -1,3 +1,4 @@
+<?php $page = 0; ?>
 <!DOCTYPE html>
 <html>
     <head>
