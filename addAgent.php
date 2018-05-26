@@ -1,16 +1,16 @@
 <?php
     include('functions/functions.php');
 
-    $agentDetails = array('AgtFirstName' => 'Joshua',
-                          'AgtMiddleInitial' => 'A',
-                          'AgtLastName' => 'McNabb',
-                          'AgtBusPhone' => 12345678901,
-                          'AgtEmail' => 'joshua.mcnabb@edu.sait.ca',
-                          'AgtPosition' => 'Student',
-                          'AgencyId' => 1);
+    // Whatever data you want to insert into the table
+    $insertData = array('AgtFirstName' => 'Joshua',
+                        'AgtMiddleInitial' => 'A',
+                        'AgtLastName' => 'McNabb',
+                        'AgtBusPhone' => 12345678901,
+                        'AgtEmail' => 'joshua.mcnabb@edu.sait.ca',
+                        'AgtPosition' => 'President',
+                        'AgencyId' => 1);
 
-    // Run the query to get the data of the agents
-    getTableData('agents', $agentDetails, 'AgentId = 1', 'AgentId', FALSE);
-
-    // Test the insert agent function
-    addNewAgent($agentDetails);
+    if(addNewTableResult('agents', $insertData))
+        echo 'A new result was successfully inserted into the agents table.';
+    else
+        echo 'The result wasn\'t inserted into the agents table.';
