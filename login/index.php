@@ -19,7 +19,7 @@
 
             <section class="contentBox">
                 <div id="login">
-                    <form id="loginForm" action="test.php" method="POST" onSubmit="return submitRegistrationForm(this);"><!-- onSubmit="return submitRegistrationForm(this);"-->
+                    <form id="loginForm" action="processLogin.php" method="POST" onSubmit="return submitRegistrationForm(this);"><!-- onSubmit="return submitRegistrationForm(this);"-->
                         <center>
                             <span class="formTitle">Login to Your Account</span><br /><br />
 
