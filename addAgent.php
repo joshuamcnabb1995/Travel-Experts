@@ -1,4 +1,7 @@
-<?php $page = 2; ?>
+<?php
+    session_start();
+    $page = 2;
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -48,6 +51,8 @@
 
                             <label id="agencyLabel" for="position">Agency ID: <span class="requiredFieldIndicator">*</span></label><br />
                             <input id="agency" type="text" name="AgencyId" maxlength=20 value=1 /><br />
+
+                            <?php if(isset($_SESSION['insertMessage'])) echo '<br />' . $_SESSION['insertMessage']; ?>
                         </div>
 
                         <center>
@@ -63,3 +68,7 @@
         <!--<?php include('inc/footer.php'); ?>-->
     </body>
 </html>
+<?php
+    // Unset the session so no message shows up when the page loads, only when the form is submitted
+    unset($_SESSION['insertMessage']);
+?>

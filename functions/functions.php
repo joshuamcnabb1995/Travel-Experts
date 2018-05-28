@@ -26,15 +26,13 @@
         $date = date('l, d F, Y \a\t g:ia');
 
         if($database->error) {
-            $logMessage = $date . ' - A new result was successfully inserted into the agents table';
+            $logMessage = $date . ' - A new result was successfully inserted into the agents table' . "\r\n";
             return FALSE;
         } else {
-            $logMessage = $date . '- The result wasn\'t inserted into the agents table';
+            $logMessage = $date . '- The result wasn\'t inserted into the agents table' . "\r\n";
             return TRUE;
         }
 
         // Log messages - not working
-        /*$myfile = fopen('logs.txt', 'a') or die('Unable to open file!');
-        fwrite($myfile, "\n". $logMessage);
-        fclose($myfile);*/
+        file_put_contents('logs.txt', $logMessage, FILE_APPEND) or die('File write error');
     }
