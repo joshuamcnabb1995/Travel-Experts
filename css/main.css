@@ -201,8 +201,8 @@ a:hover { color: #2AA3E0; }
 
 /*#register {}*/
 
-#registerForm { width: 80%; margin: 20px auto 0 auto; }
-#registerForm label { font-weight: bold; font-size: 0.9em; }
+#registerForm, #loginForm { width: 80%; margin: 20px auto 0 auto; }
+#registerForm label, #loginForm label { font-weight: bold; font-size: 0.9em; }
 
 input, select {
     background: #f7f7f7;

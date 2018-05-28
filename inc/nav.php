@@ -7,7 +7,7 @@
         <a href="contact/index.php"<?php if($page == 15) echo ' class="active"'; ?>><i class="fa fa-pencil"></i>&nbsp; Contact Us</a>
         <div class="right">
             <a href="<?php if($page == 16) echo '#'; else echo '/travel-experts/register'; ?>"<?php if($page == 16) echo ' class="active"'; ?>><i class="fa fa-user-plus"></i>&nbsp; Register</a>
-            <a href="#"<?php if($page == 17) echo ' class="active"'; ?>><i class="fa fa-lock"></i>&nbsp; Login</a>
+            <a href="<?php if($page == 17) echo '#'; else echo '/travel-experts/login'; ?>"<?php if($page == 17) echo ' class="active"'; ?>><i class="fa fa-lock"></i>&nbsp; Login</a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
     </div>
