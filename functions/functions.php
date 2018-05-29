@@ -7,18 +7,14 @@
         $columns = '';
         $values = '';
 
-        // How I would've done the assignment
-        //$columns = implode(',', array_keys($insertData));
-        //$values = "'" . implode("','", $insertData) . "'";
-
         foreach($insertData as $column => $row) {
-            $columns .= $column . ',';
+            $columns .= $column . ','; // Add commas after each column name
 
             if($column == 'password')
                 $values .= "'" . md5($row) . "',"; // Hash the password
 
             else
-                $values .= "'" . $row . "',";
+                $values .= "'" . $row . "',"; // Wrap values in single quotes and add commas after each one
         }
 
         // Remove the last comma from the columns and values
