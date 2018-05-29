@@ -4,7 +4,7 @@
     include('../inc/database.php');
 
     $formUsername = strip_tags($_POST['username']);
-    $formPassword = strip_tags(md5($_POST['password']));
+    $formPassword = strip_tags(md5($_POST['password'])); // Hash the password
     $getUsernameCount = $database->query("SELECT username FROM agents WHERE username = '$formUsername' ORDER BY AgentId DESC LIMIT 1");
     $getPasswordCount = $database->query("SELECT password FROM agents WHERE password = '$formPassword' ORDER BY AgentId DESC LIMIT 1");
     $usernameCount = $getUsernameCount->num_rows;
@@ -28,7 +28,7 @@
 
     else if($usernameCount == 1 && $passwordCount == 0) {
         $_SESSION['error_message'] = 'Password is incorrect!';
-        header('Location: index.php');   
+        header('Location: index.php');
     }
 
     else {
