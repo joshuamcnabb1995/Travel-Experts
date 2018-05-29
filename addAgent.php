@@ -1,5 +1,9 @@
 <?php
     session_start();
+
+    if(!isset($_SESSION['logged_in']))
+        header('Location: login/index.php');
+
     $page = 2;
 ?>
 <!DOCTYPE html>
@@ -24,18 +28,19 @@
                         <div id="formLeft" class="left">
                             <span class="formTitle">Add New Agent</span><br /><br />
 
+                            <label id="usernameLabel" for="username">Username <span class="requiredFieldIndicator">*</span></label><br />
+                            <input id="username" type="text" name="username" maxlength=20 /><br />
+                            <div id="usernameErrorMessage" class="errorMessage"></div><br />
+
+                            <label id="passwordLabel" for="password">Password <span class="requiredFieldIndicator">*</span></label><br />
+                            <input id="password" type="password" name="password" maxlength=20 /><br />
+                            <div id="passwordErrorMessage" class="errorMessage"></div><br />
+
                             <label id="firstnameLabel" for="firstname">First Name <span class="requiredFieldIndicator">*</span></label><br />
                             <input id="firstname" type="text" name="AgtFirstName" maxlength=20 /><br /><br />
 
                             <label id="middleInitialLabel" for="middleInitial">Middle Initial</label><br />
-                            <select name="AgtMiddleInitial">
-                                <?php
-                                    // Display options for A-Z
-                                    foreach(range('A','Z') as $v){
-                                        echo "<option value=\"$v\">$v</option>\n";
-                                    }
-                                ?>
-                            </select><br /><br />
+                            <input id="middleinitial" type="text" name="AgtMiddleInitial" maxlength=1 /><br /><br />
 
                             <label id="lastnameLabel" for="lastname">Last Name <span class="requiredFieldIndicator">*</span></label><br />
                             <input id="lastname" type="text" name="AgtLastName" maxlength=20 /><br /><br />

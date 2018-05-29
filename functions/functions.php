@@ -13,7 +13,12 @@
 
         foreach($insertData as $column => $row) {
             $columns .= $column . ',';
-            $values .= "'" . $row . "',";
+
+            if($column == 'password')
+                $values .= "'" . md5($row) . "',"; // Hash the password
+
+            else
+                $values .= "'" . $row . "',";
         }
 
         // Remove the last comma from the columns and values
